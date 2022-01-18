@@ -7,7 +7,9 @@ class Solution {
         } 
         else {
             nums[i-count]=nums[i];
-            if(count!=0) nums[i] = 0;
+            if(count!=0){
+            nums[i]=0;
+            }
         }
     }
     return;
