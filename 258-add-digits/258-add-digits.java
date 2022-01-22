@@ -14,6 +14,6 @@ class Solution {
         */
         
         // digit root d[num]=1+(num-1)%9;
-        return 1+((num-1)%9);
+        return 1+(num-1)%9;
     }
 }
