@@ -2,25 +2,25 @@ class Solution {
 public:
     bool detectCapitalUse(string word) {
         int n=word.length();
-        int a=0,b=0,c=0;
+        int case1=0,case2=0,case3=0;
         if(word[0]>='a' && word[0]<='z'){
-            b++;
+            case2++;
         }
         else if(word[0]>='A'&& word[0]<='Z'){
-            a++;
-            c++;
+            case1++;
+            case3++;
         }
         for(int i=1;i<n;i++)
         {
             if(word[i]>='A'&& word[i]<='Z'){
-                a++;
+                case1++;
             }
             else if(word[i]>='a' && word[i]<='z'){
-                b++;
-                c++;
+                case2++;
+                case3++;
             }
         }
-        if(a==n || b==n || c==n)
+        if(case1==n || case2==n || case3==n)
             return true;
         return false;
     }
