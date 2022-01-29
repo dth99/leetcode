@@ -5,7 +5,7 @@ public:
             return 0;
         int maxProfit=0;
         int minSoFar=prices[0];
-        for(int i=0;i<prices.size();i++)
+        for(int i=1;i<prices.size();i++)
         {
             minSoFar=min(minSoFar,prices[i]);
             int Profit=prices[i]-minSoFar;
