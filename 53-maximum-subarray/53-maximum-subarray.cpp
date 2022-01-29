@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        /* my apporach
+        // my apporach
         int MaxSum=nums[0];
         int CurrentSum=0;
         for(int i=0;i<nums.size();i++){
@@ -12,8 +12,9 @@ public:
             MaxSum=max(MaxSum,CurrentSum);
         }
         return MaxSum;
-        */
         
+        
+        /*
         int MaxSum=nums[0];
         int CurrentSum=nums[0];
         for(int i=1;i<nums.size();i++){
@@ -21,5 +22,6 @@ public:
             MaxSum=max(MaxSum,CurrentSum);
         }
         return MaxSum;
+        */
     }
 };
