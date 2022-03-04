@@ -10,7 +10,7 @@ class Solution {
 public:
     void deleteNode(ListNode* node) {
         // if node is last node of ll
-        if(node->next==NULL) delete node;
+        //if(node->next==NULL) delete node;
         
         // swapping current node (node want to remove) with next node
         swap(node->val,node->next->val);
