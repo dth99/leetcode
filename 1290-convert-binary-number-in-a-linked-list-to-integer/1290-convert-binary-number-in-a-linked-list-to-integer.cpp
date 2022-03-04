@@ -1,0 +1,51 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    
+    // approach 1 linked list to string , binary string to integer
+    
+    // converting binary of string into number
+    int binaryToDecimal(string s)
+    {
+        int dec=0;
+        // 10000 -> 2^0
+        
+        int base=1;
+        
+        int n= (int)s.length();
+        for(int i=n-1;i>=0;i--){
+            if(s[i]=='1'){
+                dec+=base;
+            }
+            base*=2;
+        }
+        return dec;
+    }
+    int getDecimalValue(ListNode* head) {
+        
+        
+        // converting linkedlist into string
+        string s;
+        ListNode *temp=head;
+        while(temp!=NULL){
+            int data= temp->val;
+            char x=(data==1)?'1':'0';
+            s=s+x;
+            temp=temp->next;
+        }
+        
+        int ans=binaryToDecimal(s);
+        return ans;
+        
+        
+    }
+};
