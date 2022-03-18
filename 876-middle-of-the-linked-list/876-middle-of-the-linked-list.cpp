@@ -31,6 +31,8 @@ public:
 //         }
 //         return temp;
         
+        //best approch
+        
         ListNode *slow=head,*fast=head;
         
         while(fast != NULL && fast->next != NULL){
