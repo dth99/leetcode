@@ -17,6 +17,8 @@ public:
         ListNode* temp=node->next; // storing the node we want to delete
         
         node->next=node->next->next;
+        
+        // delete the node  Most Important part 
         delete temp;
     }
 };
